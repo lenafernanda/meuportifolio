@@ -1,0 +1,494 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+      
+}
+
+body{
+    background-color: #beede1;
+    height: 100vh;
+}
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Estilo do cabeçalho */
+header{
+    padding: 40px 4%;
+}
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: rgb(0, 6, 7);
+    text-decoration: none;
+    display: inline-block;
+}
+header a:hover{
+    color: rgba(1, 4, 6, 0.849);
+    transform: scale(1.05);
+}
+header nav ul {
+    list-style-type: none;
+    display: flex; 
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    
+}
+header nav ul li{
+    
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(248, 248, 248);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+header nav ul li:hover {
+    box-shadow: 0px 0px 8px rgba(245, 245, 245, 0.987);
+}
+
+
+
+header .MF-contato button{
+    padding: 10px 40px;
+    font-size: 18px; 
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+header .MF-contato button:hover{
+    box-shadow: 0px 0px 8px rgb(250, 249, 249);
+
+} 
+
+
+/* Estilo para dispositivos móveis */
+ @media screen and (max-width: 1020px) {
+    header > .interface {
+        flex-direction: column;
+        align-items: flex-start;
+    } 
+    
+     header nav ul {
+        flex-direction: column;
+        width: 100%; 
+        padding: 0%; /* adicionado  */
+    } 
+    
+     header nav ul li {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+     
+     /* .MF-contato {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .menu-desktop {
+        display: none;
+    }  */
+     .MF-contato {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-desktop {
+        display: flex; /* Certifique-se de que o menu está visível em dispositivos móveis */
+     } 
+    
+ } 
+
+
+
+h2.titulo{
+    color: black;
+    font-size: 38px;
+    text-align: center;
+}
+
+
+
+/* Estilo para alinhar imagem e texto lado a lado */
+section.topo-do-site {
+    padding: 40px 4%;
+    max-width: 1200px; /* Limite máximo para a largura */
+    margin: 0 auto; /* Centraliza o contêiner */
+}
+
+section.topo-do-site .flex {
+    display: flex;
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    justify-content: space-between; /* Espaço entre os itens */
+    gap: 30px; /* Espaço entre a imagem e o texto */
+}
+
+.img-topo-site img {
+    width: 210%; /* Ajusta a largura da imagem conforme necessário */
+    max-width: 600px; /* Define uma largura máxima para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.txt-topo-site {
+    display: block; /* Garante que o texto esteja em formato de bloco */
+    font-size: 16px;
+    max-width: 600px; /* Define um limite máximo para a largura do texto */
+    text-align: left;
+    color: rgba(0, 0, 0, 0.901);
+}
+
+/* Garantir que os elementos dentro do .txt-topo-site fiquem um abaixo do outro */
+.txt-topo-site h1,
+.txt-topo-site p {
+    margin: 20px 0; /* Espaçamento entre os elementos de texto */
+}
+
+
+
+
+
+/* estilo das especialidades */
+section.especialidades{
+    padding: 40px 4%;
+}
+section.especialidades .flex{
+    gap: 60px;
+}
+.especialidades .especialidades-box{
+    color: black;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s; 
+}
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px black;
+}
+.especialidades .especialidades-box i{
+    font-size: 70px;
+    color: rgba(255, 77, 0, 0.668);
+}
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+/* Estilo do portifolio */
+section.portifolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px rgb(94, 92, 92);
+}
+section.portifolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-color: rgb(253, 253, 253);
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+.img-port:hover{
+    background-position: 100% 100%;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 29, 29, 0.73);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fefefe;
+    opacity: 0;
+    transition: .5s;
+}
+.overlay:hover{
+    opacity: 1 ;
+}
+/* estilo do rodapé */
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px rgb(94, 92, 92);
+}
+footer .flex{
+    justify-content: space-between;
+}
+footer .line-footer{
+    padding: 20px 0;
+    
+}
+.borda{
+    border-top: 2px solid rgb(249, 250, 250);
+
+
+}
+
+.MF-social button{
+    
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color:rgb(252, 252, 252);
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+footer .line-footer p a{
+    color: black;
+}
+footer .line-footer p i{
+    color: rgba(39, 150, 198, 0.789);
+    font-size: 22px;
+}
+
+@media screen and (max-width: 1020px){
+    /* classes gerais */
+    .flex{
+        flex-direction: column;
+        align-items: center; 
+    }
+    /* cabeçalho */
+    .menu- desktop , .MF-contato{
+        display: none;
+    }
+    /* topo do site */
+    .topo-do-site h1{
+        font-size: 32px;
+        
+    } 
+    section.topo-do-site{
+        padding: 20px 9%;
+    }
+    .topo-do-site h1{
+        font-size: 20px;
+    }
+    .topo-do-site .img-topo-site img{
+        width: 90%;
+        margin-right: 50px;
+    }
+    /* especialidades */
+    section.especialidades{
+        padding: 40px 8%;
+    }
+    
+     .img-port{
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+        
+        
+    } */
+    txt-topo-do-site {
+        max-width: 100%; /* Ajusta a largura máxima do texto */
+        padding: 0; /* Remove o espaçamento interno */
+        text-align: center; /* Centraliza o texto em dispositivos móveis */
+    }
+    section.portifolio .flex{
+        gap: 60px;
+    }
+    /* rodapé */
+    footer.flex{
+        flex-direction: column;
+    }
+    footer .line-footer{
+        text-align: center;
+    }
+}
+
+/* Estilo do modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px; /* Ajuste o tamanho máximo conforme necessário */
+}
+
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo das imagens do portfólio */
+.img-port {
+    width: 900px; /* Ajuste o tamanho do quadrado conforme necessário */
+    height: 400px; /* Ajuste o tamanho do quadrado conforme necessário */
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.img-port .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Modal para exibir a imagem ampliada e o resumo */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Remove a rolagem do modal */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente */
+}
+
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 76%;
+    max-width: 9997px; /* Limita a largura máxima do modal */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffffd4; /* Fundo transparente para o conteúdo do modal */
+    border-radius: 10px;
+}
+
+.modal-content img {
+    max-width: 45%;
+    border-radius: 8px;
+}
+
+#caption {
+    max-width: 50%;
+    color: rgb(13, 13, 13); /* Mudança para preto para melhor contraste */
+    padding: 20px;
+    overflow-y: auto; /* Permite rolagem no texto se for longo */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 767px) {
+    .modal-content {
+        flex-direction: column; /* Alinha a imagem e o texto em coluna em dispositivos móveis */
+        width: 94%; /* Ajusta a largura do modal em dispositivos móveis */
+        max-width: none;
+        padding: 10px;
+    }
+
+    .modal-content img {
+        width: 100%; /* Imagem ocupa a largura total em dispositivos móveis */
+        height: auto; /* Mantém a proporção da imagem */
+        margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+    }
+
+    #caption {
+        width: 100%; /* Texto ocupa a largura total em dispositivos móveis */
+        font-size: 14px; /* Ajuste o tamanho da fonte para melhor leitura em dispositivos móveis */
+        max-height: 300px; /* Limita a altura do texto para evitar que fique muito longo */
+        overflow-y: auto; /* Permite rolagem no texto se for longo */
+        text-align: left; /* Alinha o texto à esquerda para melhor leitura */
+    }
+}
+
